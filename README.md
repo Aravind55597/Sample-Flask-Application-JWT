@@ -1,6 +1,4 @@
-# WebApp boilerplate with React JS and Flask API
-
-# REMOVED GITPOD AND HEROKU INTEGRATIONS 
+# WebApp boilerplate with React JS and Flask API (Removed Gitpod and Heroku files)
 
 > Documentation: https://start.4geeksacademy.com/
 

@@ -62,7 +62,8 @@ It is recomended to install the backend first, make sure you have Python 3.8, Pi
 5. Migrate the migrations: `$ pipenv run migrate` (skip if you have not made changes to the models on the `./src/api/models.py`)
 6. Run the migrations: `$ pipenv run upgrade`
 7. Start the virtual env `$ pipenv shell`
-8. Run the application: `$ pipenv run start`
+8. Run this command to seed the database `$ flask insert-test-users 5`
+9. Run the application: `$ pipenv run start`
 
 ### Backend Populate Table Users
 
@@ -83,8 +84,6 @@ And you will see the following message:
   test_user5@test.com created.
   Users created successfully!
 ```
-
-To update with all yours tables you can edit the file app.py and go to the line 80 to insert the code to populate others tables
 
 ### Front-End Manual Installation:
 

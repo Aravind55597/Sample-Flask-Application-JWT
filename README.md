@@ -1,6 +1,4 @@
-# WebApp boilerplate with React JS and Flask API
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/react-flask-hello.git)
+# WebApp boilerplate with React JS and Flask API (Removed Gitpod and Heroku files)
 
 > Documentation: https://start.4geeksacademy.com/
 
@@ -11,7 +9,6 @@
 - React.js front end and python/flask backend for your web application.
 - Extensive documentation [here](https://start.4geeksacademy.com/).
 - Integrated with Pipenv for package managing.
-- Fast deloyment to heroku [in just a few steps here](https://start.4geeksacademy.com/backend/deploy-heroku-posgres).
 - Use of .env file.
 - SQLAlchemy integration for database abstraction.
 
@@ -61,9 +58,12 @@ It is recomended to install the backend first, make sure you have Python 3.8, Pi
 | MySQL     | mysql://username:password@localhost:port/example    |
 | Postgress | postgres://username:password@localhost:5432/example |
 
-4. Migrate the migrations: `$ pipenv run migrate` (skip if you have not made changes to the models on the `./src/api/models.py`)
-5. Run the migrations: `$ pipenv run upgrade`
-6. Run the application: `$ pipenv run start`
+4. Create migratiosn folder (if it does not exist) `$ pipenv run init `
+5. Migrate the migrations: `$ pipenv run migrate` (skip if you have not made changes to the models on the `./src/api/models.py`)
+6. Run the migrations: `$ pipenv run upgrade`
+7. Start the virtual env `$ pipenv shell`
+8. Run this command to seed the database `$ flask insert-test-users 5`
+9. Run the application: `$ pipenv run start`
 
 ### Backend Populate Table Users
 
@@ -85,15 +85,9 @@ And you will see the following message:
   Users created successfully!
 ```
 
-To update with all yours tables you can edit the file app.py and go to the line 80 to insert the code to populate others tables
-
 ### Front-End Manual Installation:
 
 -   Make sure you are using node version 14+ and that you have already successfully installed and runned the backend.
 
 1. Install the packages: `$ npm install`
 2. Start coding! start the webpack dev server `$ npm run start`
-
-## Publish your website!
-
-This boilerplate it's 100% integrated with Herkou, [follow this tutorial](https://start.4geeksacademy.com/backend/deploy-heroku-posgres) and just by pushing your changes to the heroku repository will deploy the website afterwards.

@@ -1,6 +1,6 @@
 
 import click
-from .User import  User
+from .models.User import  User
 from .utils import db
 
 """

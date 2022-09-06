@@ -1,6 +1,6 @@
 import os
 from flask_admin import Admin
-from .User import  User
+from .models.User import  User
 from flask_admin.contrib.sqla import ModelView
 from .utils import db
 

@@ -2,7 +2,7 @@
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
 from flask import Flask, request, jsonify, url_for, Blueprint
-from .User import  User
+from .models.User import  User
 from .utils import db
 
 api = Blueprint('api', __name__)

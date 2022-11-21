@@ -1,10 +1,15 @@
-from venv import create
-from api import create_app; 
-import os; 
+from flask_cors import CORS; 
+from flask import Flask; 
+from utils import db; 
+app = Flask(__name__)
 
-app=create_app(); 
+# Allow CORS requests to this API-----------------------------------------------------------------------------------------------------------------------------
+CORS(app)
+
+# Register your blueprints------------------------------------------------------------------------------------------------------------------------------------
+# app.register_blueprint(api, url_prefix='/api')
 
 
 if __name__ == '__main__':
-    PORT = int(os.environ.get('PORT', 3001))
+    PORT = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=PORT, debug=True)

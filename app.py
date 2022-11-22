@@ -1,6 +1,6 @@
 from flask_cors import CORS; 
 from flask import Flask; 
-from utils import db; 
+from utils.dbConfig import db; 
 app = Flask(__name__)
 
 # Allow CORS requests to this API-----------------------------------------------------------------------------------------------------------------------------

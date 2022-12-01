@@ -1,13 +1,14 @@
 from flask_cors import CORS; 
 from flask import Flask; 
 from utils.dbConfig import db; 
+from routes.routes import api; 
 app = Flask(__name__)
 
 # Allow CORS requests to this API-----------------------------------------------------------------------------------------------------------------------------
 CORS(app)
 
 # Register your blueprints------------------------------------------------------------------------------------------------------------------------------------
-# app.register_blueprint(api, url_prefix='/api')
+app.register_blueprint(api, url_prefix='/api')
 
 
 if __name__ == '__main__':
